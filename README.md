@@ -1,8 +1,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/89d4d564-7fdb-4427-88d2-1b42a9eafe87/deploy-status)](https://demonstrate.netlify.com)
 
-## 🚀 My Preferred Gatsby Starter Settings
+## 🚀 How?
 
     ```sh
+    git clone https://github.com/mdmartinez/my-gatsby-starter.git
     cd my-gatsby-starter
     npm i
     npm start
@@ -32,4 +33,3 @@
     ├── postcss.config.js
     ├── tailwind.config.js
     └── README.md
-
