@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/89d4d564-7fdb-4427-88d2-1b42a9eafe87/deploy-status)](https://app.netlify.com/sites/demonstrate/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/89d4d564-7fdb-4427-88d2-1b42a9eafe87/deploy-status)](https://demonstrate.netlify.com)
 
 ## 🚀 My Preferred Gatsby Starter Settings
 
