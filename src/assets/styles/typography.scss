@@ -1,0 +1,127 @@
+@import './mixins/fluid-type';
+// A fully packed example of fluid typography\layout techniques 
+// including detailed code comments with explanations
+
+// Lazy reset
+// * { padding: 0; margin: 0; }
+// * > * { margin-bottom: .5em }
+
+html {
+  line-height: 1.4;
+	// I'm setting the root EM to a fluid value. It is important to
+	// understand how all Em and Rem values are relative to this. 
+	// It's more than CSS inheritance.
+	// This mixin can be found here: http://codepen.io/MadeByMike/pen/vNrvdZ
+	@include fluid-type(font-size, 25rem, 64rem, 1rem, 1.1rem);
+	font-family: 'Arvo', serif;
+	background: papayawhip;
+	// margin: 0;
+}
+
+body {
+	
+	// It's usually a good idea to set line height with unitless values
+	// But until we can interpolate unitless values in CSS, if we want fluid
+	// line-hight we need to set it with a 'length' value.
+	
+	// This will have other consequences for how we declare line-height 
+	// throughout this example. A basic explanation of why can be found here:
+	// http://codepen.io/MadeByMike/pen/vXvQjY
+	
+	@include fluid-type(line-height, 20em, 80em, 1.5em, 1.8em);
+	
+	// By setting the width of the body in Rem units it will scale
+	// at the same rate as the typography meaning no text-reflow \o/.
+	// width: 25rem;	
+	
+	// Break points can and should be used with fluid layouts it's not 
+	// just one or the other. 
+
+	@media screen and (min-width: 27em) {
+		// width: 35rem;
+	}
+	
+  // When I adjust the width of the image for small screens, I also
+	// adjust the width of the body element as well. This means that 
+	// despite the break-point, the page composition is the same and
+	// lines of text wrap predictably. 
+	
+	@media screen and (min-width: 40em) {
+		// width: 100rem;
+	}
+	
+	// Watch how when the image changes width the line length   
+  // remains exactly the same. Majestic! 
+	
+	// max-width: 1200px;
+	// margin: 3rem auto;
+}
+
+// Fluid modular scale headings:
+	
+// Because we're using fluid EMs for line-height the H1 (and other elements) 
+// need their own declarations, otherwise they inherit the line-height
+// from the html element where the 1em is 16px. 
+
+// The same will be true anywhere the font-size is not 1em.
+// Depending on the complexity of your layout, fluid leading 
+// may not be is worth this effort. 
+
+h1 { 
+	@include fluid-type(font-size, 25rem, 64rem, 1.338rem, 3.052rem); 
+	@include fluid-type(line-height, 20em, 80em, 1.5em, 2em);
+}
+h2 { @include fluid-type(font-size, 25rem, 64rem, 1.262rem, 2.441rem); 
+	@include fluid-type(line-height, 20em, 80em, 1.5em, 2em);
+}
+h3 { @include fluid-type(font-size, 25rem, 64rem, 1.191rem, 1.953rem); 
+	@include fluid-type(line-height, 20em, 80em, 1.5em, 2em);
+}
+h4 { @include fluid-type(font-size, 25rem, 64rem, 1.124rem, 1.563rem); 
+	@include fluid-type(line-height, 20em, 80em, 1.5em, 2em);
+}
+h5 { @include fluid-type(font-size, 25rem, 64rem, 1.06rem, 1.25rem); 
+	@include fluid-type(line-height, 20em, 80em, 1.5em, 2em);
+}
+h6 { font-size: 1em; }
+
+figure {  
+	
+	// width: 10rem; 
+	
+	@media screen and (min-width: 40em) {
+		// width: 20rem; 
+	}
+	
+	float: right; 
+	margin-left: 2em; 
+	
+	// By setting this font-size to a fixed value, em values (including browser defaults)
+	// inside this container will be relative to this 
+	// rather than the root Em.
+	font-size: 10px; 		
+	
+	line-height: initial; // Reset the line-height 
+	
+	h2 {
+		// Setting `initial` will remove the font-size declaration set in
+		// the modular scale for this h2. Its font-size will now be the 
+		// default EM value. It will still be relative to parent container 
+		// with a value of 10px, so this font-size is now fixed.
+		font-size: initial;
+		// Similarly there is a specific declaration of line height on the h2
+		// This is set in Ems that are not relative to this container.
+		// We can force this element to inherit the line-height `initial` 
+		// from the parent container
+		line-height: inherit; 
+	}
+}
+
+img { width: 100%; }
+
+.first {
+	// On larger screens, this text is emphasised with a slightly larger font-size 
+	@include fluid-type(font-size, 25rem, 64rem, 1rem, 1.125rem); 
+	@include fluid-type(line-height, 20em, 80em, 1.5em, 1.8em);
+	font-weight: 600; // By gosh do I wish we could interpolate unitless values!!!
+}

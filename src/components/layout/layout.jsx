@@ -1,14 +1,7 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React, { Fragment, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useSiteMetadata } from '../hooks/use-site-metadata';
-import Header from './header';
+import useSiteMetadata from '../../hooks/use-site-metadata';
+import Header from '../header';
 import styles from './layout.module.css';
 
 const Layout = ({ children }) => {
@@ -26,9 +19,16 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <div>
           <p>You clicked {count} times</p>
-          <button onClick={() => setCount(count + 1)}>I'm a button!</button>
+          <button
+            className="border-gray-100 shadow text-xl"
+            onClick={() => setCount(count + 1)}
+          >
+            Stock button
+          </button>
         </div>
-        <footer>© {new Date().getFullYear()}, Built by Dan</footer>
+        <footer className="text-blue-200">
+          © {new Date().getFullYear()} , Built by Daniel
+        </footer>
       </div>
     </Fragment>
   );
