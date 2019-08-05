@@ -2,13 +2,11 @@
 
 ## 🚀 How?
 
-    ```sh
     git clone https://github.com/mdmartinez/my-gatsby-starter.git
     cd my-gatsby-starter
     npm i
     npm start
     open http://localhost:8000
-    ```
 
 ## 🧐 Structure 
     .
