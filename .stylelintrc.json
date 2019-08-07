@@ -1,0 +1,11 @@
+{
+	"extends": [
+		"stylelint-config-standard"
+	],
+	"ignoreAtRules": [
+		"tailwind"
+	],
+	"ignoreFiles": [
+		"node_modules/*"
+	]
+}
