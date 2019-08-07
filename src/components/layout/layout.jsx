@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import useSiteMetadata from '../../hooks/use-site-metadata';
 import Header from '../header';
-import styles from './layout.module.css';
+import { container } from './layout.module.css';
 
 const Layout = ({ children }) => {
   const { title } = useSiteMetadata();
@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
   return (
     <Fragment>
       <Header siteTitle={title} />
-      <div className={styles.container}>
+      <div className={container}>
         <main>{children}</main>
         <div>
           <p>You clicked {count} times</p>
