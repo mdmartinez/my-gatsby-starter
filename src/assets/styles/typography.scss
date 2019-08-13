@@ -13,7 +13,7 @@ html {
 	// It's more than CSS inheritance.
 	// This mixin can be found here: http://codepen.io/MadeByMike/pen/vNrvdZ
 	@include fluid-type(font-size, 25rem, 64rem, 1rem, 1.1rem);
-	font-family: 'Arvo', serif;
+	font-family: 'Inter', serif;
 	background: papayawhip;
 	// margin: 0;
 }

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Daniel's Custom Gatsby Starter`,
-    description: `Daniel's Custom Gatsby Starter`,
+    title: `Daniel's Custom Starter`,
+    description: `Daniel's Custom Starter`,
     author: 'Daniel',
   },
   plugins: [
