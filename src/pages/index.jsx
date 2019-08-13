@@ -1,24 +1,14 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import Layout from '../components/layout/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={['daniel martinez', 'blog', 'technology']} />
-    <h1 className="text-2xl">Write Something Great</h1>
-    <p className="first">Another great site is waiting to begin.</p>
-    <p>Time to begin building.</p>
-    <div
-      className="bg-blue-700"
-      style={{ maxWidth: '300px', marginBottom: '1.45rem' }}
-    >
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-    <br />
+    <SEO title="Reading" keywords={['daniel martinez', 'blog', 'technology']} />
+    <h1 className="text-6xl text-gray-700">Trust the Exponential</h1>
+    <h2 className="text-5xl text-gray-700">The benefit comes at the end</h2>
+    <h3 className="text-4xl text-gray-700">No hurry, no pause</h3>
   </Layout>
 );
 

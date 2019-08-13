@@ -3,5 +3,6 @@
 @tailwind components;
 
 @import '../../components/layout/layout.module.css';
+@import './inter.css';
 
 @tailwind utilities;
