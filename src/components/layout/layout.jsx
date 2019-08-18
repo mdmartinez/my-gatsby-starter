@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import useSiteMetadata from '../../hooks/use-site-metadata';
 import Header from '../header';
-import { container } from './layout.module.css';
+import { grid, content } from './layout.module.css';
 
 const Layout = ({ children }) => {
   const { title } = useSiteMetadata();
@@ -10,8 +10,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={title} />
-      <div className={container}>
-        <main>{children}</main>
+      <div className={grid}>
+        <main className={content}>{children}</main>
       </div>
     </>
   );

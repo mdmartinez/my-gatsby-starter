@@ -1,19 +1,22 @@
 .header {
-  background: #cb4b16;
-  margin-bottom: 1.45rem;
+  grid-area: head;
+
+  @apply bg-orange-700; /* TODO: switch to #cb4b16;  */
+  @apply mb-6;
 
   .container {
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 1.45rem 1.0875rem;
+    @apply m-auto;
+    @apply max-w-5xl;
+    @apply py-6;
+    @apply px-32;
 
     h1 {
-      margin: 0;
+      @apply m-0;
     }
-    
+
     a {
-      color: white;
-      text-decoration: none;
+      @apply no-underline;
+      @apply text-white;
     }
   }
 }

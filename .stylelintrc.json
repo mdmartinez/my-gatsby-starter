@@ -7,5 +7,6 @@
 	],
 	"ignoreFiles": [
 		"node_modules/*"
-	]
+	],
+	"rules": {"at-rule-no-unknown": null}
 }
