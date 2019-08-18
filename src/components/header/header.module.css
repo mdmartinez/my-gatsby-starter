@@ -1,0 +1,31 @@
+.header {
+  grid-area: head;
+  background-color: theme('colors.my-orange');
+
+  @apply mb-6;
+  @apply flex;
+  @apply py-6;
+
+  a {
+    @apply no-underline;
+    @apply text-white;
+  }
+}
+
+@screen lg {
+  .header {
+    @apply pl-32;
+  }
+}
+
+@screen md {
+  .header {
+    @apply justify-center;
+  }
+}
+
+@screen sm {
+  .header {
+    @apply justify-center;
+  }
+}
