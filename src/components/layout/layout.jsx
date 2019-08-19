@@ -9,8 +9,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={title} />
       <div className={grid}>
+        <Header siteTitle={title} />
         <main className={content}>{children}</main>
       </div>
     </>

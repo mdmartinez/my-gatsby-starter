@@ -1,20 +1,27 @@
 .header {
   grid-area: head;
+  grid-column: full;
   background-color: theme('colors.my-orange');
 
   @apply mb-6;
   @apply flex;
+
+  /* @apply justify-center; */
   @apply py-6;
+
+  .container {
+    /* @apply max-w-4xl; */
+  }
+
+  @screen lg {
+    .container {
+      @apply pl-32;
+    }
+  }
 
   a {
     @apply no-underline;
     @apply text-white;
-  }
-}
-
-@screen lg {
-  .header {
-    @apply pl-32;
   }
 }
 
@@ -26,6 +33,7 @@
 
 @screen sm {
   .header {
+    /* @apply w-10/12; */
     @apply justify-center;
   }
 }
