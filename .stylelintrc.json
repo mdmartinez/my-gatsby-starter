@@ -1,12 +1,6 @@
 {
-	"extends": [
-		"stylelint-config-standard"
-	],
-	"ignoreAtRules": [
-		"tailwind"
-	],
-	"ignoreFiles": [
-		"node_modules/*"
-	],
-	"rules": {"at-rule-no-unknown": null}
+  "extends": ["stylelint-config-standard"],
+  "ignoreAtRules": ["tailwind"],
+  "ignoreFiles": ["node_modules/*"],
+  "rules": { "at-rule-no-unknown": null }
 }

@@ -4,5 +4,6 @@
 
 @import '../../components/layout/layout.module.css';
 @import './inter.css';
+@import './josefin-sans.css';
 
 @tailwind utilities;

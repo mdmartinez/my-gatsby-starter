@@ -2,19 +2,24 @@
   grid-area: head;
   grid-column: full;
   background-color: theme('colors.my-orange');
+  font-family:
+    'Josefin Sans',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen-Sans,
+    Ubuntu,
+    Cantarell,
+    'Helvetica Neue',
+    sans-serif;
 
   @apply mb-6;
   @apply flex;
-
-  /* @apply justify-center; */
   @apply py-6;
 
-  .container {
-    /* @apply max-w-4xl; */
-  }
-
   @screen lg {
-    .container {
+    h1 {
       @apply pl-32;
     }
   }
@@ -33,7 +38,6 @@
 
 @screen sm {
   .header {
-    /* @apply w-10/12; */
     @apply justify-center;
   }
 }
