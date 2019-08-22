@@ -5,5 +5,8 @@
 @import '../../components/layout/layout.module.css';
 @import './inter.css';
 @import './josefin-sans.css';
+/* @import './nunito.css'; */
+/* @import './hasklig.css'; */
+/* @import './hack.css'; */
 
 @tailwind utilities;
